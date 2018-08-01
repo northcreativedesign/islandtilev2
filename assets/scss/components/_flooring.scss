@@ -1,0 +1,29 @@
+.flooring-page {
+
+  margin-top: 80px;
+
+  h1 {
+    margin-bottom: 0 !important;
+  }
+
+  hr {
+    display: block;
+    margin: 0 auto;
+    width: 8.24rem;
+    border: 1px solid #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    &:first-child {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+  }
+
+}

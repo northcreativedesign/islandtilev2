@@ -1,0 +1,284 @@
+
+// Quick View Flooring Mixin
+
+@mixin quick-img ($imgpath, $postion: center, $backgroundsize: cover, $height: 309px) {
+  background: url($imgpath);
+  height: $height;
+  background-size: $backgroundsize;
+}
+
+/*
+--------------------------------------------------------------------------------
+                               QUICK SECTION
+--------------------------------------------------------------------------------
+*/
+
+.index-products {
+  margin-top: 5rem;
+
+  hr {
+    display: block;
+    margin: 0 auto;
+    width: 8.375rem;
+    border: 0.1rem solid #000000;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    margin-bottom: 0 !important;
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    border: none;
+    box-shadow: none;
+    .button {
+      display: block;
+      margin: 0 auto;
+      width: 15rem;
+      height: 3rem;
+      border: 0.063rem solid #ffffff;
+      position: relative;
+      top: 130px;
+      border-radius: 0;
+      background-color: transparent;
+      font-family: $latomed;
+      font-size: 1.5rem;
+      color: white;
+      text-align: center;
+      padding-top: 0.2rem;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.56);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__flooringbg {
+    @include quick-img('../img/quick_flooring.jpg');
+    background-position: bottom;
+  }
+  &__installation {
+    @include quick-img('../img/quick_installation.jpg');
+  }
+  &__countertops {
+    @include quick-img('../img/quick_countertops.jpg');
+  }
+  &__backsplash {
+    @include quick-img('../img/quick_backsplash.jpg');
+  }
+  &__blinds {
+    @include quick-img('../img/quick_blinds.jpg');
+  }
+  &__accessory {
+    @include quick-img('../img/quick_accessory.jpg');
+  }
+  &__designer {
+    background-image: linear-gradient(to right,
+     rgba(0, 0, 0, 0.6),
+     rgba(0, 0, 0, 0.6)),
+     url('../img/quick_interior.jpg');
+    height: 309px;
+    background-size: cover;
+    color: white;
+    h1 {
+      text-align: center;
+      color: white;
+      padding-top: 7%;
+      text-transform: uppercase;
+      font-family: $oswaldbold;
+      font-size: 46px;
+    }
+    h6 {
+      text-transform: uppercase;
+      color: white;
+      font-size: 24px;
+    }
+  }
+}
+
+/*
+--------------------------------------------------------------------------------
+                               SHOWROOM SECTION
+--------------------------------------------------------------------------------
+*/
+
+
+.showroom {
+  &__img {
+    margin-top: 60px;
+    height: 572px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      position: absolute;
+      // top: -200px;
+    }
+  }
+  .is-fluid {
+    margin: 0;
+  }
+}
+
+#cf4a {
+  overflow: hidden;
+}
+
+// IMAGE SLIDE SHOW
+
+@-webkit-keyframes cf4FadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@-moz-keyframes cf4FadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@-o-keyframes cf4FadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@keyframes cf4FadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+#cf4a {
+  position:relative;
+  height:798px;
+  width:auto;
+}
+#cf4a img {
+  position:absolute;
+  left:0;
+}
+
+#cf4a img {
+  -webkit-animation-name: cf4FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 20s;
+
+  -moz-animation-name: cf4FadeInOut;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 20s;
+
+  -o-animation-name: cf4FadeInOut;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 20s;
+
+  animation-name: cf4FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+}
+
+#cf4a img:nth-of-type(1) {
+  -webkit-animation-delay: 20s;
+  -moz-animation-delay: 20s;
+  -o-animation-delay: 20s;
+  animation-delay: 20s;
+}
+#cf4a img:nth-of-type(2) {
+  -webkit-animation-delay: 16s;
+  -moz-animation-delay: 16s;
+  -o-animation-delay: 16s;
+  animation-delay: 16s;
+}
+#cf4a img:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+  -moz-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s;
+}
+#cf4a img:nth-of-type(4) {
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+  -o-animation-delay: 8s;
+  animation-delay: 8s;
+}
+#cf4a img:nth-of-type(5) {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+
+
+// BRAND LOGO SECTION
+
+.brands {
+  margin-top: 3rem;
+  &__container {
+    padding-top: 4rem;
+    .image {
+      max-width: 250px;
+    }
+  }
+  &__top-spacing {
+    padding-top: 2rem;
+  }
+}
